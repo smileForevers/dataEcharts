@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>红旗渠文化旅游区</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css" />
+	</head>
+
+	<body style="overflow-x: hidden">
+		<div id="app">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="item in imgData">
+						<img :src="item.imgUrl">
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-white"></div>
+			</div>
+			<div class="tips">
+				<div class="flexLeft fl lineHeightBetween">
+					<img src="img/tips.png" alt="">
+					<span>公告：</span>
+				</div>
+				<div class="allTips fl">
+					<ul>
+						<li class="tipList" v-cloak @click="openAfficheDetails(item.id)" v-for="item in scenicTipData">{{item.title}}</li>
+					</ul>
+				</div>
+				<div class="flexRight fl">
+					<a href="html/affiche.html">更多>></a>
+				</div>
+			</div>
+			<div class="flex col-5">
+				<a href="html/description.html">
+					<img src="img/1.png" alt=""> 景区概况
+				</a>
+				<a href="html/tour.html">
+					<img src="img/11.png" alt=""> 游记攻略
+				</a>
+				<a href="html/interpretation.html">
+					<img src="img/13.png" alt=""> 导游讲解
+				</a>
+				<a href="html/spotActivties.html">
+					<img src="img/8.png" alt="">  景区活动
+				</a>
+				<a href="html/suggestLine.html">
+					<img src="img/12.png" alt=""> 线路推荐
+				</a>
+				<a href="html/largeData.html">
+					<img src="img/9.png" alt="">  在园人数
+				</a>
+				<a href="html/vr.html">
+					<img src="img/10.png" alt=""> 虚拟旅游
+				</a>
+				<a href="javascript:;">
+					<img src="img/3.png" alt="">  游客订票
+				</a>
+				<!--<a href="html/touristGuide.html">-->
+					<!--<img src="img/2.png" alt=""> 游客指南-->
+				<!--</a>-->
+				<a href="http://sm.chuqula.com/ideamov-front/interface/home?m_id=36dc5e0364643c9f0164872f4f72000c">
+					<img src="img/5.png" alt=""> 云商城
+				</a>
+				<!-- <a href="http://bdm.zhongzhiyunyou.com:8085/scenicGuide/">
+					<img src="img/6.png" alt=""> 智慧游
+				</a> -->
+				<a href="html/complaint.html">
+					<img src="img/14.png" alt=""> 咨询建议
+				</a>
+				
+			</div>
+			<div class="index-bottom bd-spacing" style="margin-top: 8px">
+				<div class="index-bottom-item flex-between">
+					<img src="img/bottom1.png" alt="" class="large-img" @click="toSpirit">
+					<img src="img/bottom2.png" alt="" class="little-img" @click="toList">
+				</div>
+				<div class="index-bottom-item flex-between">
+					<img src="img/bottom3.png" alt="" class="little-img" @click="toScenicGuide">
+					<img src="img/bottom4.png" alt="" class="large-img" @click="toUnforgettable">
+				</div>
+			</div>
+			<p class="copyright">Copyright©林州市红旗渠风景区</p>
+		</div>
+		<img src="img/custom.gif" class="custom draggable">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<!--api-->
+		<script src="js/api.js"></script>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-4.3.3.min.js"></script>
+		<script src="customQi/js/dragScript.js" type="text/javascript" charset="utf-8"></script>
+		<!--vue-->
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					scenicData: '', //景区数据
+					scenicPotData: '', //景点数据
+					imgData: [], //轮播图数组
+					scenicTipData:''
+				},
+				mounted() {
+					/*获取轮播图*/
+					getDataAjax(
+						apiList.getCirclePicsList, //url
+						{
+							channelId: imgid,
+							num: num
+						}, //data
+						this.setImgData //callback
+					)
+					/*获取景区数据*/
+					getDataAjax(
+						apiList.getScenic, //url
+						{
+							scenicId: scenicId
+						}, //data
+						this.setData //callback
+					)
+					/* 获取景点数据 */
+					getDataAjax(
+						apiList.getScenicSpot, //url
+						{
+							spotType: 1,
+							scenicId: scenicId
+						}, //data
+						this.setPotData //callback
+					)
+					/* 获取景点公告 */
+					getDataAjax(
+						apiList.getCmsContentList, //url
+						{
+							channelId: tipid,
+							num: 1
+						}, //data
+						this.setTipData //callback
+					)
+				},
+				methods: {
+					swiperInit() {
+						var swiper = new Swiper('.swiper-container', {
+							autoplay: {
+								disableOnInteraction: false
+							},
+							loop: true,
+							observer: true,
+							observeParents: true,
+							pagination: {
+								el: '.swiper-pagination',
+							}
+						});
+					},
+					setImgData(res) {
+						this.imgData = JSON.parse(res).resultData.rows
+						this.$nextTick(function() {
+							this.swiperInit();
+						});
+					},
+					setData(res) {
+						this.scenicData = JSON.parse(res).resultData
+					},
+					setPotData(res) {
+						this.scenicPotData = JSON.parse(res).resultData
+					},
+					setTipData(res) {
+						this.scenicTipData = JSON.parse(res).resultData.rows.slice(0,3)
+						this.$nextTick(function() {
+							setInterval(function() {
+				                scrollNews($('.allTips'));
+				            }, 3000);
+						});
+					},
+					openAfficheDetails(id){
+						location.href='./html/afficheDetails.html?id='+id;
+					},
+                    toSpirit () {
+                      location.href='./html/spirit.html';
+					},
+                    toList () {
+                      location.href='./html/list.html';
+					},
+                  	toScenicGuide () {
+                      location.href='http://bdm.zhongzhiyunyou.com:8085/scenicGuide/';
+					},
+                    toUnforgettable () {
+                      location.href='./html/unforgettable.html';
+                    }
+				}
+			})
+			function scrollNews(obj) {
+	            var $self = obj.find("ul");
+	            var lineHeight = $self.find("li:first").height();
+	            $self.animate({
+	                "marginTop": -lineHeight + "px"
+	            }, 500, function() {
+	                $self.css({
+	                    marginTop: 0
+	                }).find("li:first").appendTo($self);
+	            })
+	        }
+		</script>
+	</body>
+</html>
