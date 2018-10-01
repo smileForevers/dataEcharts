@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>大屏管理</title>
+		<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="./index.css"/>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="watermark">
+				<img src="../../img/watermark.png" />
+			</div>
+			<nav class="header" style="width:100%;height:10%;">
+				<iframe src="../../component/header.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			</nav>
+			<div class="main line clearfloat">
+				<img src="../../img/line.png" alt="" class="line-img">
+				<img src="../../img/line.png" alt="" class="line-img line-img-right">
+				<div class="main-left fl">
+					<div class="left-bg">
+						<ul class="part-title">
+				            <li class="lineHeightNotCenter">天气情况</li>
+				        </ul>
+				        <div class="part-main">
+							<iframe src="weather/weather.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+						</div>
+			        </div>
+			        <div class="left-bg">
+			        	<ul class="part-title clearfloat">
+				            <li class="lineHeightNotCenter fl">实时客流监测</li>
+				            <li class="fr clickBtn">
+				            	<span class="clickBtnList active">趋势</span>
+				            	<span class="clickBtnList">人数</span>
+				            </li>
+				        </ul>
+				        <div class="part-main" id="keliu">
+				        	<iframe src="realTraffic/realTraffic.html" id="keliuIframe" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+				        </div>
+				    </div>
+		           	<div class="left-bg">
+		           		<ul class="part-title">
+				            <li class="lineHeightNotCenter">未来7天客流预测</li>
+				        </ul>
+				        <div class="part-main" id="yuce">
+				        	<iframe src="nextSevenDays/nextSevenDays.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+				        </div>
+				    </div>
+			    </div>
+			    <div class="main-middle fl">
+			    	<div class="tips lineHeightNotCenter">
+			            <MARQUEE scrollAmount=2 class="tips-txt lineHeightNotCenter">截止当前，未出现景区预警情况</MARQUEE>
+			        </div>
+			    	<div class="main-middle1">
+						<ul class="part-title fl sourseTitle lineHeight">国内游客来源分布</ul>
+				        <div class="part-main soursemain" id="" style="float:left">
+							<iframe src="touristsSource/touristsSource.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+					<div class="main-middle2 clearfloat">
+						<div class="main-middle2-list fl">
+							<ul class="part-title">
+					            <li class="lineHeightNotCenter">游客画像</li>
+					        </ul>
+					        <div class="part-main">
+								<iframe src="touristsPortrait/touristsPortrait.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+							</div>
+					    </div>
+						<div class="main-middle2-list fl">
+							<ul class="part-title">
+					            <li class="lineHeightNotCenter">停车数据</li>
+					        </ul>
+					        <div class="part-main">
+								<iframe src="portAnalysis/portAnalysis.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+							</div>
+						</div>
+					</div>
+			    </div>
+				<div class="main-right fl">
+					<div class="right-bg">
+						<ul class="part-title">
+				            <li class="lineHeightNotCenter">出行方式</li>
+				        </ul>
+				        <div class="part-main">
+							<iframe src="allResource/allResource.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+		           	<div class="right-bg">
+		           		<ul class="part-title">
+				            <li class="lineHeightNotCenter">景区消费结构</li>
+				        </ul>
+				        <div class="part-main">
+							<iframe src="consumptionStructure/consumptionStructure.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+				        </div>
+		           	</div>
+		           	<div class="right-bg">
+		           		<ul class="part-title">
+				            <li class="lineHeightNotCenter">视频监控</li>
+				        </ul>
+				        <div class="part-main clearfloat">
+				        	<div class="videoImg fl" style="width: 48%;height: 100%;margin-left: 1%;">
+				        		<img style="display: block;width: 95%;height:96%;margin: 2% auto;" src="../../img/videoImg1.jpg"/>
+				        	</div>
+				        	<div class="videoImg fl" style="width: 48%;height: 100%;margin-left: 2%;">
+				        		<img style="display: block;width: 95%;height:96%;margin: 2% auto;" src="../../img/videoImg2.jpg"/>
+				        	</div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.clickBtnList').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			var index=$(this).index();
+			if(index==0){
+				$('#keliuIframe').attr('src','realTraffic/realTraffic.html');
+			}else if(index==1){
+				$('#keliuIframe').attr('src','peopleNum/peopleNum.html');
+			}
+		})
+	</script>
+</html>

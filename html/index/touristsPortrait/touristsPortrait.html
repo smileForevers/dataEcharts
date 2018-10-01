@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>游客画像</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="touristsPortrait.css"/>
+	</head>
+	<body>
+		<div class="main clearfloat" id="main">
+			<div id="left" class="left fl">
+				<div class="top">性别</div>
+				<div class="clearfloat imgs">
+					<div class="imgList fl">
+						<div class="imgListImg">
+							<img src="../../../img/man.png"/>
+						</div>
+						<p>男</p>
+					</div>
+					<div class="imgList fl">
+						<div class="imgListImg">
+							<img src="../../../img/woman.png"/>
+						</div>
+						<p>女</p>
+					</div>
+				</div>	
+				<div class="bottom">
+					<p class="progressBar">
+						<span></span>
+					</p>
+					<div class="proportions clearfloat">
+						<span class="manProportion proportion fl">60%</span>
+						<span class="womanProportion proportion fl">40%</span>
+					</div>
+				</div>
+			</div>
+			<div id="right" class="right fl">
+				<div class="top">年龄</div>
+				<div id="rightMain">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../plug/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="touristsPortrait.js" type="text/javascript" charset="utf-8"></script>
+</html>

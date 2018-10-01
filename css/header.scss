@@ -1,0 +1,93 @@
+@import "./fn.scss";
+.head {
+    width: 100%;
+    height: 100%;
+    background: url(../img/head-bg.png) center center no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.head-time {
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+
+.timeImg {
+    width: 140px;
+    height: 100%;
+}
+
+.homeImg {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.home {
+    color: #51d5ff;
+    margin-left: 15px;
+}
+
+.nowTime {
+    display: block;
+    margin-left: 5%;
+    height: 100%;
+    /*line-height: 120px;*/
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 6px;
+    font-family: 'unidreamled';
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.nowDate {
+    /*display: block;*/
+    height: 100%;
+    /*line-height: 120px;*/
+    font-size: 16px;
+    color: #fff;
+    font-family: '微软雅黑';
+    margin-left: 5%;
+}
+
+.head-title img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+#title{
+    font-family: 'trends';
+    font-size: 26px;
+}
+.head-ul {
+    width: 33%;
+    height: 100%;
+    li {
+        float: left;
+        width: 20%;
+        height: 60%;
+        cursor: pointer;
+        &:hover {
+            a {
+                color: $blue;
+            }
+            background: url(../img/nav.png) no-repeat center center;
+        }
+        a {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            color: #88acc3;
+        }
+    }
+    li.active {
+        a {
+            color: $blue;
+        }
+        background: url(../img/nav.png) no-repeat center center;
+    }
+}

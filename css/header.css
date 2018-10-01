@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.head {
+	width: 100%;
+	height: 100%;
+	background: url(../img/head-bg.png) center center no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.head-time {
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.timeImg {
+	width: 140px;
+	height: 100%;
+}
+
+.homeImg {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+}
+
+.home {
+	color: #51d5ff;
+	margin-left: 15px;
+}
+
+.nowTime {
+	display: block;
+	margin-left: 5%;
+	height: 100%;
+	/*line-height: 120px;*/
+	font-size: 24px;
+	color: #fff;
+	letter-spacing: 6px;
+	font-family: 'unidreamled';
+	display: -webkit-flex;
+	align-items: center;
+}
+
+.nowDate {
+	/*display: block;*/
+	height: 100%;
+	/*line-height: 120px;*/
+	font-size: 16px;
+	color: #fff;
+	font-family: '微软雅黑';
+	margin-left: 5%;
+}
+
+.head-title {
+	float: left;
+	width: 34%;
+	height: 100%;
+	color: #fff;
+	font-size: 20px;
+	text-align: center !important;
+}
+
+.head-title img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+#title{
+	font-family: 'trends';
+	font-size: 26px;
+}
+.head-ul {
+	width: 33%;
+	height: 100%;
+}
+
+.head-ul li {
+	float: left;
+	width: 18%;
+	margin-right: 1%;
+	height: 60%;
+	cursor: pointer;
+}
+.head-ul .backToLogin{
+	float: left;
+	width: 5%;
+	height: 60%;
+	cursor: pointer;
+}
+.head-ul li:hover {
+	background: url(../img/nav.png) no-repeat center center;
+	background-size: 100% 70%;
+}
+.head-ul .backToLogin:hover {
+	background:none;
+}
+.head-ul li:hover a {
+	color: #51d5ff;
+}
+
+.head-ul li a {
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	color: #88acc3;
+}
+
+.head-ul li.active {
+	background: url(../img/nav.png) no-repeat center center;
+	background-size: 100% 70%;
+}
+
+.head-ul li.active a {
+	color: #51d5ff;
+}
+
+
+/*# sourceMappingURL=header.css.map */

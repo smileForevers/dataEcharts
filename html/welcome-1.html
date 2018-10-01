@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>景区大数据运营平台</title>
+		<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="welcome.css"/>
+		<style>
+			body {
+				margin: 0;  /*去除外边距*/
+				background-color: black;   /*背景：黑色*/
+			}
+			#album {
+				width:120px;
+				height: 200px;
+				position: relative;
+				border: 1px grey solid;
+				border-radius: 4px;
+				margin: 160px auto;
+				transform: rotateY(0deg);
+				transform-style: preserve-3d;   //设置3D视角
+			perspective: 1200px;  /*设置元素被查看视角的距离1200PX*/
+				transform:rotateX(-10deg);
+			}
+			#album img {
+				width: 120px;
+				height: 200px;
+				position: absolute;
+				box-shadow: 0 0 8px white; /*外阴影*/
+			}
+		</style>
+	</head>
+	<body>
+		<img src="../img/welcome-txt.png" alt="" class="welcome-txt">
+		<div id="album">
+			<div class="circle-item">
+				<a href="">
+					<img src="../img/earth.png"/>
+					<p>应急指挥中心</p>
+				</a>
+			</div>
+			<div class="circle-item">
+				<a href="index/index.html">
+					<img src="../img/earth.png"/>
+					<p>运行监测中心</p>
+				</a>
+			</div>
+			<div class="circle-item">
+				<a href="data-analysis/data-analysis.html">
+					<img src="../img/earth.png"/>
+					<p>数据分析中心</p>
+				</a>
+			</div>
+			<div class="circle-item">
+				<a href="">
+					<img src="../img/earth.png"/>
+					<p>视频监控中心</p>
+				</a>
+			</div>
+			<div class="circle-item">
+				<a href="">
+					<img src="../img/earth.png"/>
+					<p>虚拟旅游中心</p>
+				</a>
+			</div>
+			<div class="circle-item">
+				<a href="">
+					<img src="../img/earth.png"/>
+					<p>后台中心</p>
+				</a>
+			</div>
+		</div>
+		<img src="../img/circle.png" alt="" id="circle" class="circle">
+		<!--<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+          //自定义函数
+          $.fn.extend({
+            rotate: function () {
+              ele = this ;
+              setInterval('singleRotate()',20);
+            }
+          });
+
+          //初始角度
+          var degree = -10;
+
+          //单次旋转
+          function singleRotate() {
+            //一次增加50度
+            degree = degree + 50 * Math.PI / 180;
+            ele.css("transform","rotate("+degree+"deg)");
+          }
+          $("#circle").rotate();
+		</script>-->
+		<script type="text/javascript">
+          var album=document.getElementById("album");
+          var imgs=album.getElementsByTagName("img");
+          //获取图片数组
+          var length=imgs.length; //获取数组的长度
+          var deg=Math.floor(360/length);//计算每个图片偏转角度
+          for(var i=0;i<length;i++){
+            //console.log(i*deg);
+            imgs[i].style.transform='rotateY('+i*deg+'deg) translateZ(400px)';    //为每个图片 添加样式沿Y轴旋转并分散400px
+          }
+          var x = 0;
+          setInterval(function(){
+
+            album.style.transform = " rotateX(-12deg) rotateY("+ (x++) * 0.2 +"deg)";
+
+          },20);
+		</script>
+	</body>
+</html>

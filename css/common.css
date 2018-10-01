@@ -1,0 +1,45 @@
+.layui-laydate, .layui-laydate-hint{
+	border: 1px solid #00cdff !important;
+    background-color: #2252a9 !important;
+    color: #03e3eb !important;
+}
+.layui-laydate-header i{
+	color: #03e3eb !important;
+}
+.layui-laydate-content th{
+	color: #03e3eb !important;
+}
+.layui-laydate-header {
+    border-bottom: 1px solid #00cdff !important;
+}
+.layui-laydate-content .laydate-day-next, .layui-laydate-content .laydate-day-prev{
+	color: #03e3eb !important;
+}
+.layui-laydate-content td{
+	color: #03e3eb !important;
+}
+.layui-laydate .layui-this{
+	background-color: #083a75!important;
+	border: 1px solid #00cdff !important;
+	box-sizing: border-box !important;
+}
+.layui-laydate-content td.laydate-selected{
+	background-color: #083a75 !important;
+	color: #03e3eb !important;
+}
+.layui-laydate-footer{
+	border-top: 1px solid #00cdff !important;
+}
+.layui-laydate-range .laydate-main-list-1 .layui-laydate-content{
+	border-left: 1px solid #00cdff !important;
+}
+.laydate-footer-btns span{
+    border: 1px solid #00cdff !important;
+    background-color: #083a75 !important;
+}
+.layui-laydate-content td:hover,.layui-laydate-list li:hover{
+	background-color: #083a75!important;
+	border: 1px solid #00cdff !important;
+	box-sizing: border-box !important;
+	color:#fff !important;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>虚拟旅游</title>
+		<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plug/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="virtualTourism.css"/>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="watermark">
+				<img src="../../img/watermark.png" />
+			</div>
+			<nav class="header" style="width:100%;height:10%;">
+				<iframe src="../../component/header.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			</nav>
+			<div class="main clearfloat">
+				<div class="leftPart fl verticalcenter">
+					<div class="leftPartMain">
+						<div class="title verticalcenter">虚拟旅游</div>
+						<ul class="navMenu" id="navMenu">
+							
+						</ul>
+					</div>
+				</div>
+				<div class="rightPart fl verticalcenter">
+					<div class="rightPartMain">
+						<iframe class="frames" src="" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/template-native.js" type="text/javascript" charset="utf-8"></script>
+	<script src="virtualTourism.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/html" id="scriptDiv">
+		<%for(var i=0;i<list.length;i++){%>
+			<li class="firstLi">
+				<a href="javascript:;" class="afinve"> 
+					<img src="../../img/videoPart1.png"/>
+					<span class=""><%=list[i].name%></span> 
+					<span class="layui-icon">&#xe623;</span> 
+				</a>
+				<ul class="sub-menu">
+					<%if(list[i].data&&list[i].data.length>0){%>
+						<%for(var j=0;j<list[i].data.length;j++){%>
+						<li>
+							<a href="javascript:;" link="<%=list[i].data[j].url%>">
+								<img src="../../img/videoPart2.png"/>
+								<span><%=list[i].data[j].name%></span>
+							</a>
+						</li>
+						<%}%>
+					<%}%>
+				</ul>
+			</li>
+		<%}%>
+		<div class="clear"></div>
+	</script>	 
+</html>

@@ -1,0 +1,582 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	background: url(../../img/analysis_bg_big.jpg) left center no-repeat;
+	background-size: 100% 100%;
+}
+.main{
+	box-sizing: border-box;
+	width:100%;
+	height:88%;
+	margin-top: 2%;
+}
+.left{
+	width: 23%;
+	height: 100%;
+}
+.leftTitle{
+	width: 100%;
+	height: 6%;
+	color: #fff;
+	font-family: 'trends';
+	font-size: 16px;	
+	background: url(../../img/videoTitle.png) no-repeat;
+	background-size:100% 100%;
+	background-color: #105dad;
+}
+.leftsearch{
+	width: 100%;
+	height: 7%;
+}
+.search{
+	width: 92%;
+	height: 72%;
+	background: url(../../img/videoTitle.png) no-repeat;
+	background-size:100% 100%;
+}
+.searchImg{
+	width: 17%;
+	height: 100%;
+}
+.searchImg .layui-icon{
+	width: 40%;
+	color: #13daef;
+	font-size: 20px;
+}
+.searchInput{
+	width: 69%;
+	height: 100%;
+}
+.searchInput input{
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: none;
+	color: #13daef;
+}
+.searchInput input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #13daef;
+}
+
+.searchInput input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #13daef;
+}
+
+.searchInput input:-ms-input-placeholder{
+    color: #13daef;
+}
+
+.searchInput input::-webkit-input-placeholder{
+    color: #13daef;
+}
+.reloadImg{
+	width: 14%;
+	height: 80%;
+	border-left: 1px solid #13DAEF;
+	box-sizing: border-box;
+}
+.reloadImg .layui-icon{
+	width: 100%;
+	color: #13daef;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 0;
+}
+.navMenu {
+	display: block;
+	width: 100%;
+	height: 82%;
+	overflow-y: auto;
+	font-family: 'trends';
+	background: url(../../img/videoLeft.png) no-repeat;
+	background-size: 100% 100%;
+	padding-top: 15px;
+}
+
+.navMenu-top {
+	padding: 10px;
+	color: #fff;
+}
+
+.navMenu>li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0px;
+	cursor: pointer;
+}
+
+.navMenu>li>a {
+	display: block;
+	overflow: hidden;
+	padding: 5px 0 5px 25px;
+	line-height: 40px;
+	color: #fff;
+	font-size: 18px;
+	position: relative;
+	font-family: 'trends';
+	cursor: pointer;
+}
+.navMenu>li>a>img,.navMenu>li>ul.sub-menu>li>a>img{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.navMenu>li>ul.sub-menu>li>a>img{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+.navMenu>li>ul.sub-menu li>a>img{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+/*.navMenu>li:nth-of-type(1)>a {
+	border-top: 1px solid transparent;
+}
+
+.navMenu>li:last-child>a {
+	border-bottom: 1px solid transparent;
+}*/
+
+.navMenu>li>a>i {
+	font-size: 20px;
+	float: left;
+	font-style: normal;
+	margin: 0 15px;
+}
+
+.navMenu li a .arrow:before {
+	display: block;
+	float: right;
+	margin-top: 1px;
+	margin-right: 15px;
+	display: inline;
+	font-size: 18px;
+	height: auto;
+	content: "\f105";
+	font-weight: 300;
+	text-shadow: none;
+}
+
+.navMenu li a .arrow.open:before {
+	float: right;
+	margin-top: 1px;
+	margin-right: 15px;
+	display: inline;
+	height: auto;
+	font-size: 18px;
+	content: "\f107";
+	font-weight: 300;
+	text-shadow: none;
+}
+.layui-icon{
+	margin-left: 20px;
+}
+.navMenu>li>a.active,
+.navMenu>li>a:hover {
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#4cabeb));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.navMenu>li>ul.sub-menu,
+.navMenu>li>ul.sub-menu>li>ul.sub-menu {
+	display: none;
+	list-style: none;
+	clear: both;
+	margin: 8px 0px 0px 10px;
+	padding-bottom: 5px;
+}
+
+.navMenu>li.active>ul.sub-menu,
+.navMenu>li>ul.sub-menu>li.active>ul.sub-menu {}
+
+.navMenu>li>ul.sub-menu li {
+	background: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navMenu>li>ul.sub-menu li>a {
+	display: block;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 30px;
+	color: #fff;
+	clear: both;
+	font-family: 'trends';
+}
+
+.navMenu>li>ul.sub-menu li>a.active,
+.navMenu>li>ul.sub-menu li>a:hover,
+.navMenu>li>ul.sub-menu>li.active>a {
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#4cabeb));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.navMenu::-webkit-scrollbar{/*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样）（位置1）*/  
+    width:6px;  
+    height:10px;  
+}  
+.navMenu::-webkit-scrollbar-button{/*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置2）*/  
+    display:none;
+}  
+.navMenu::-webkit-scrollbar-track{/*外层轨道，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）*/  
+    display:none;  
+}  
+.navMenu::-webkit-scrollbar-track-piece{/*内层轨道，滚动条中间部分（位置4）*/  
+	
+    display:none;
+}  
+.navMenu::-webkit-scrollbar-thumb{/*滚动条里面可以拖动的那部分（位置5）*/  
+    background:#0cdaff;  
+    border-radius:4px;  
+}  
+.navMenu::-webkit-scrollbar-corner {/*边角（位置6）*/  
+    display:none;
+}  
+.navMenu::-webkit-scrollbar-resizer  {/*定义右下角拖动块的样式（位置7）*/  
+    display:none;
+}  
+.navMenu{  
+    scrollbar-arrow-color: rgba(255,255,255,1); /**//*三角箭头的颜色*/   
+    scrollbar-face-color: #0cdaff; /**//*立体滚动条的颜色*/   
+    scrollbar-3dlight-color: rgba(255,255,255,1); /**//*立体滚动条亮边的颜色*/   
+    scrollbar-highlight-color:none; /**//*滚动条空白部分的颜色*/   
+    scrollbar-shadow-color: #0cdaff; /**//*立体滚动条阴影的颜色*/   
+    scrollbar-darkshadow-color: none; /**//*立体滚动条强阴影的颜色*/   
+    scrollbar-track-color: rgba(255,255,255,1); /**//*立体滚动条背景颜色*/   
+    scrollbar-base-color:#0cdaff; /**//*滚动条的基本颜色*/   
+}
+
+.right{
+	width: 77%;
+	height: 100%;
+}
+.rightTop{
+	width: 100%;
+	height: 72%;
+}
+.mapPart{
+	width: 69%;
+	height: 100%;
+	margin-left: 1%;
+}
+.map{
+	width: 100%;
+	height: 92%;
+	border: 1px solid #13DAEF;
+	box-sizing: border-box;
+}
+
+.list{
+	width: 100%;
+	height: 8%;
+	border: 1px solid #13DAEF;
+	box-sizing: border-box;
+}
+.lists{
+	width: 25%;
+	height: 80%;
+	border-right: 1px solid #13DAEF;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.lists img{
+	width: 50px;
+}
+.lists:nth-child(4){
+	border-right: none;
+}
+.lists:nth-child(4) img{
+	width: 24px;
+}
+.listTitle{
+	margin-left: 5px;
+	color: #d0f9fb;
+	font-size: 16px;
+}
+.result{
+	width: 28%;
+	height: 100%;
+	margin-left: 1%;
+	border: 1px solid #13DAEF;
+	box-sizing: border-box;
+	display: none;
+}
+.result.active{
+	display: block;
+}
+.resultList{
+	width: 100%;
+	height: 50%;
+}
+.resultListTitle{
+	width: 100%;
+	height: 14%;
+	color: #2ed8fb;
+	font-size: 16px;
+	text-indent: 15px;
+}
+.tables{
+	width: 100%;
+	height: 86%;
+	border-top: 1px solid #13DAEF;
+	border-bottom: 1px solid #13DAEF;
+	box-sizing: border-box;
+}
+.tableMain{
+	overflow-y: auto;
+	color: #d0f9fb;
+	font-size: 14px;
+	font-weight: normal;
+	overflow-y: auto;
+	scrollbar-arrow-color: rgba(255,255,255,1); /**//*三角箭头的颜色*/   
+    scrollbar-face-color: #0cdaff; /**//*立体滚动条的颜色*/   
+    scrollbar-3dlight-color: rgba(255,255,255,1); /**//*立体滚动条亮边的颜色*/   
+    scrollbar-highlight-color:none; /**//*滚动条空白部分的颜色*/   
+    scrollbar-shadow-color: #0cdaff; /**//*立体滚动条阴影的颜色*/   
+    scrollbar-darkshadow-color: none; /**//*立体滚动条强阴影的颜色*/   
+    scrollbar-track-color: rgba(255,255,255,1); /**//*立体滚动条背景颜色*/   
+    scrollbar-base-color:#0cdaff; /**//*滚动条的基本颜色*/   
+}
+th{
+	height: 38px;
+}
+.tableMain::-webkit-scrollbar{/*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样）（位置1）*/  
+    width:6px;  
+    height:6px;  
+}  
+.tableMain::-webkit-scrollbar-button{/*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置2）*/  
+    display:none;
+}  
+.tableMain::-webkit-scrollbar-track{/*外层轨道，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）*/  
+    display:none;  
+}  
+.tableMain::-webkit-scrollbar-track-piece{/*内层轨道，滚动条中间部分（位置4）*/  
+    display:none;
+}  
+.tableMain::-webkit-scrollbar-thumb{/*滚动条里面可以拖动的那部分（位置5）*/  
+    background:#0cdaff;  
+    border-radius:4px;  
+}  
+.tableMain::-webkit-scrollbar-corner {/*边角（位置6）*/  
+    display:none;
+}  
+.tableMain::-webkit-scrollbar-resizer  {/*定义右下角拖动块的样式（位置7）*/  
+    display:none;
+}
+.yet{
+	color: #2ed8fb;
+}
+.un{
+	color: #bf7430;
+}
+.yetTr{
+	background: rgba(255,255,255,0.1);
+}
+.resultTitle{
+	width: 100%;
+	height: 7%;
+	color: #2ed8fb;
+	font-size: 16px;
+	text-indent: 15px;
+	border-bottom: 1px solid #2ed8fb;
+	box-sizing: border-box;
+}
+.resultMain{
+	width: 100%;
+	height: 93%;
+	font-size: 14px;
+}
+.resultMainList{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+.resultMainList1{
+	margin-top: 20px;
+}
+.doList{
+	cursor: pointer;
+}
+.doTitle{
+	color: #2ed8fb;
+}
+.doList img{
+	/*width: 24px;*/
+	height: 20px;
+}
+.listLeft{
+	width: 30%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #2ed8fb;
+}
+.listRight{
+	width: 65%;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 5px;
+	text-indent: 10px;
+	background: url(../../img/titleBg.png) no-repeat;
+	background-size:100% 100%;
+	border: none !important;
+	color: #d0f9fb;
+	padding: 0;
+}
+.layui-input{
+	background: url(../../img/rili.png) no-repeat;
+	background-size: 100% 100%;
+}
+.listRight2{
+	line-height: 40px;
+}
+.layui-form-radio{
+	margin: 0 10px 0 5px;
+	background: #2ed8fb;
+}
+.slider-h{
+	width: 65%;
+	float: left;
+}
+.slider-rulelabel span{
+	color: #d0f9fb;
+}
+.progressbar-value, .progressbar-value .progressbar-text{
+	background-color:#2ed8fb;
+	color: #fff;
+}
+
+
+.rightBottom{
+	width: 98%;
+	height: 28%;
+	margin-left: 1%;
+	display: none;
+}
+.rightBottom.active{
+	display: block;
+}
+.bottomTitles{
+	width: 100%;
+	height: 22%;
+}
+.bottomTitle{
+	height: 60%;
+	margin-left: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+.bottomTitle2{
+	height: 60%;
+	margin-left: 20px;
+	color: #13DAEF;
+	cursor: pointer;
+}
+.bottomTitle.active{
+	color: #13DAEF;
+	border-bottom: 1px solid #13DAEF;
+}
+.bottomMain{
+	width: 100%;
+	height: 64%;
+	border: 1px solid #13DAEF;
+}
+.tableList{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: #d0f9fb;
+	font-size: 12px;
+	font-family: '微软雅黑';
+}
+.tableList.active{
+	display: block;
+}
+.tableList table tbody tr:nth-child(odd){
+	background: rgba(255,255,255,0.2);
+}
+
+
+
+.info {
+    border: solid 1px #2ed8fb;
+    background: #115eae;
+    border-radius: 5px;
+    width: 300px;
+}
+.info-top{
+	width: 300px;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	color: #c1ac41;
+	font-size: 16px;
+	position: relative;
+	/*border-bottom: solid 1px #2ed8fb;*/
+}
+.info-close{
+	position: absolute;
+	width: 16px;
+	text-align: center;
+	height: 16px;
+	line-height: 16px;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	color: #c1ac41;
+	cursor: pointer;
+}
+.contentList{
+	width: 270px;
+	padding: 0 15px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.contentList:nth-child(odd){
+	background: rgba(255,255,255,0.2);
+}
+.contentList2{
+	height: 60px;
+	background: none !important;
+}
+.contentList3{
+	height: 60px;
+	min-height: 30px;
+}
+.contentList2 img{
+	display: block;
+	width: 40px;
+	cursor: pointer;
+}
+.contentListMain1{
+	width: 65%;
+}
+.contentListMain2{
+	width: 35%;
+}
+.contentListMainLeft{
+	color: #c1ac41;
+}
+.contentListMainLeft1{
+	display: block;
+	width: 17%;
+}
+.contentListMainRight{
+	color: #43bfc9;
+}
+.contentListMainRight1{
+	display: block;
+	width: 83%;
+}

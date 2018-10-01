@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模块分析</title>
+		<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="../index/touristsPortrait/touristsPortrait.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plug/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="./data-analysis.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="watermark">
+				<img src="../../img/watermark.png" id="shuiyin"/>
+			</div>
+			<nav class="header" style="width:100%;height:10%;">
+				<iframe src="../../component/header.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			</nav>
+			<div class="main">
+				<div class="leftTitle">
+					<ul class="ul-img">
+						<li class="change">
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img0.png" />
+								<span>景区设备信息</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img1.png" />
+								<span>客流量分析</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img2.png" />
+								<span>客源地分析</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img3.png" />
+								<span>游客画像分析</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img4.png" />
+								<span>景区运营分析</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img5.png" />
+								<span>媒体信息监测</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img6.png" />
+								<span>游客关注度分析</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="lineHeightNotCenter">
+								<img src="../../img/icon/data-img7.png" />
+								<span>自动化报告</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="rightMain">
+					<!--设备信息-->
+					<div class="rightList active">
+						<div class="firstMain">
+							<div id="deviceWel"  class="_main active">
+								<div class="_wrap clearfloat">
+									<div class="deviceLeft fl">
+										<div class="_title">
+											景区设备分布
+										</div>
+										<div class="deviceLeftMain deviceLeftMain3 bg_small">
+											<div class="mainList_main" id="wifiContainer" style="height: 100%;"></div>
+										</div>
+									</div>
+									<div class="deviceRight fr">
+										<div class="_title">
+											景区设备信息
+										</div>
+										<ul class="deviceRightMain deviceLeftMain3 bg-small">
+											<li>
+												<img src="../../img/icon/mechine.png" alt="">
+												<span>闸机</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+											<li>
+												<img src="../../img/icon/camera.png" alt="">
+												<span>监控</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+											<li>
+												<img src="../../img/icon/radio.png" alt="">
+												<span>智能广播</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+											<li>
+												<img src="../../img/icon/post.png" alt="">
+												<span>停车场</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+											<li>
+												<img src="../../img/icon/wifi.png" alt="">
+												<span>W I F I</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+											<li>
+												<img src="../../img/icon/wc.png" alt="">
+												<span>公共厕所</span>
+												<span>
+													<i class="green">2</i>个
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="devicePark" class="_main ">
+								<div class="_wrap clearfloat">
+									<div class="parkLeft fl">
+										<div class="parkEarning">
+											<p class="_title lineHeightNotCenter">今日车辆数和收益</p>
+											<div class="partView">
+												<div class="parkEarningIcons">
+													<div class="parkEarningIconsList clearfloat">
+														<div class="icon fl">
+															<img src="../../img/icon/income.png"/>
+														</div>
+														<div class="fl">
+															<p class="earningTitle">所有车辆统计收入</p>
+															<p class="kaizha">2988.5元</p>
+														</div>
+													</div>
+													<div class="parkEarningIconsList clearfloat">
+														<div class="icon fl">
+															<img src="../../img/icon/rate.png"/>
+														</div>
+														<div class="fl">
+															<p class="earningTitle">车位累计使用率</p>
+															<p class="usage">58%</p>
+														</div>
+													</div>
+													<div class="parkEarningIconsList clearfloat">
+														<div class="icon fl">
+															<img src="../../img/icon/free.png"/>
+														</div>
+														<div class="fl">
+															<p class="earningTitle">累计免费开闸</p>
+															<p class="income">621次</p>
+														</div>
+													</div>
+												</div>
+												<div class="parkEarningTraffic clearfloat">
+													<div class="parkEarningTrafficList fl">
+														<div class="parkCarImg">
+															<img src="../../img/icon/car.png"/>
+														</div>
+														<div class="allCarNum">
+															<p class="earningTitle">今日车辆入场流量</p>
+															<p class="comeCar">585</p>
+														</div>
+														<div class="parkDatas">
+															<div class="parkDatasList clearfloat">
+																<p class="fl">日</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/down.png"/></span>
+																	<span>3%</span>
+																</div>
+															</div>
+															<div class="parkDatasList clearfloat">
+																<p class="fl">周</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/up.png"/></span>
+																	<span>5%</span>
+																</div>
+															</div>
+															<div class="parkDatasList clearfloat">
+																<p class="fl">月</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/down.png"/></span>
+																	<span>3%</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="parkEarningTrafficList fr">
+														<div class="parkCarImg">
+															<img src="../../img/icon/car.png"/>
+														</div>
+														<div class="allCarNum">
+															<p class="earningTitle">今日车辆出场流量</p>
+															<p class="comeCar">689</p>
+														</div>
+														<div class="parkDatas">
+															<div class="parkDatasList clearfloat">
+																<p class="fl">日</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/down.png"/></span>
+																	<span>4%</span>
+																</div>
+															</div>
+															<div class="parkDatasList clearfloat">
+																<p class="fl">周</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/up.png"/></span>
+																	<span>11%</span>
+																</div>
+															</div>
+															<div class="parkDatasList clearfloat">
+																<p class="fl">月</p>
+																<div class="fr">
+																	<span><img src="../../img/icon/up.png"/></span>
+																	<span>8%</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="parkEarningTable">
+													<table width="90%" height="90%" align="center" border="1">
+														<thead>
+															<tr>
+																<th>车场名称</th>
+																<th>今日实收（元）</th>
+																<th>车位使用率</th>
+																<th>已停车位</th>
+																<th>剩余车位</th>
+																<th>免费开闸（次）</th>
+															</tr>
+														</thead>
+														<tbody id="marketTbody">
+															<tr>
+																<th>东钱湖</th>
+																<th>2589</th>
+																<th>45%</th>
+																<th>500</th>
+																<th>201</th>
+																<th>18</th>
+															</tr>
+															<tr>
+																<th>凤凰古城</th>
+																<th>4589</th>
+																<th>75%</th>
+																<th>900</th>
+																<th>123</th>
+																<th>128</th>
+															</tr>
+															<tr>
+																<th>白鹿仓</th>
+																<th>3456</th>
+																<th>68%</th>
+																<th>1020</th>
+																<th>101</th>
+																<th>64</th>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="parkSourse" style="position: relative;">
+											<p class="_title lineHeightNotCenter">今日车辆来源分布</p>
+											<div class="payway clearfloat">
+												<span class="paywayList active fl" onclick="partViews(this)">今日车辆来源地</span>
+												<span class="paywayList fl" onclick="partViews(this)">车型排名</span>
+											</div>
+											<div class="partView partViews active clearfloat">
+												<div class="parkSourseList fl">
+													<div class="parkSourseListTitle">
+														<span>城市</span>
+														<span>游客数</span>
+													</div>
+													<div class="parkSourseListMain" id="parkSourseListMain1">
+														
+													</div>
+												</div>
+												<div class="parkSourseList fl">
+													<div class="parkSourseListTitle">
+														<span>省份</span>
+														<span>游客数</span>
+													</div>
+													<div class="parkSourseListMain" id="parkSourseListMain2">
+														
+													</div>
+												</div>
+											</div>
+											<div class="partView partViews clearfloat">
+												<div class="partViewsList fl">
+													<div class="partViewsListTop_list clearfloat">
+														<p class=" verticalcenter fl">排名</p>
+														<p class=" verticalcenter fl">名称</p>
+														<p class=" verticalcenter fl">数量</p>
+													</div>
+													<ul class="partViewsListBottom_list">
+														<li class="analyseRankings analyseRankings1 clearfloat">
+															<p class="fl verticalcenter">1</p>
+															<p class="fl verticalcenter">宝马</p>
+															<p class="fr verticalcenter">1234</p>
+														</li>
+														<li class="analyseRankings analyseRankings2 clearfloat">
+															<p class="fl verticalcenter">2</p>
+															<p class="fl verticalcenter">奔驰</p>
+															<p class="fr verticalcenter">934</p>
+														</li>
+														<li class="analyseRankings analyseRankings3 clearfloat">
+															<p class="fl verticalcenter">3</p>
+															<p class="fl verticalcenter">奥迪</p>
+															<p class="fr verticalcenter">834</p>
+														</li>
+													</ul>
+												</div>
+												<div class="partViewsList fl">
+													<div class="partViewsListTop_list clearfloat">
+														<p class=" verticalcenter fl">排名</p>
+														<p class=" verticalcenter fl">名称</p>
+														<p class=" verticalcenter fl">数量</p>
+													</div>
+													<ul class="partViewsListBottom_list">
+														<li class="analyseRankings clearfloat">
+															<p class="fl verticalcenter">4</p>
+															<p class="fl verticalcenter">现代</p>
+															<p class="fr verticalcenter">734</p>
+														</li>
+														<li class="analyseRankings clearfloat">
+															<p class="fl verticalcenter">5</p>
+															<p class="fl verticalcenter">本田</p>
+															<p class="fr verticalcenter">678</p>
+														</li>
+														<li class="analyseRankings clearfloat">
+															<p class="fl verticalcenter">6</p>
+															<p class="fl verticalcenter">凯迪拉克</p>
+															<p class="fr verticalcenter">434</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="parkRight fr">
+										<div class="parkRightTop clearfloat">
+											<div class="parkRightTopLeft fl">
+												<p class="_title lineHeightNotCenter">停车使用情况</p>
+												<div class="partView">
+													<div class="bg-img" id="park1">
+														
+													</div>
+												</div>
+											</div>
+											<div class="parkRightTopRight fr">
+												<p class="_title lineHeightNotCenter">消息区</p>
+												<div class="partView" id="">
+													<div class="remain clearfloat">
+														<div class="remainLeft fl">
+															<p class="manwei lineHeight">满位提醒</p>
+															<p class="remainTime lineHeight">14:00</p>
+														</div>
+														<div class="remainMain lineHeightNotCenter">南门停车场车位已停满</div>
+													</div>
+													<div class="remain clearfloat">
+														<div class="remainLeft fl">
+															<p class="manwei lineHeight">满位提醒</p>
+															<p class="remainTime lineHeight">14:42</p>
+														</div>
+														<div class="remainMain lineHeightNotCenter">凤凰古城车位已停满</div>
+													</div>
+													<div class="remain clearfloat">
+														<div class="remainLeft fl">
+															<p class="manwei lineHeight">满位提醒</p>
+															<p class="remainTime lineHeight">14:56</p>
+														</div>
+														<div class="remainMain lineHeightNotCenter">白鹿仓车位已停满</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="parkRightBottom clearfloat">
+											<div class="parkRightTopLeft fl">
+												<p class="_title lineHeightNotCenter">今日停车各区状态</p>
+												<div class="partView">
+													<div class="bg-img" id="park2">
+														
+													</div>
+												</div>
+											</div>
+											<div class="parkRightTopRight fr">
+												<p class="_title lineHeightNotCenter">停车时长分析</p>
+												<div class="partView">
+													<div class="bg-img" id="park3">
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="deviceWifi" class="_main">
+								<div class="_mains _flexColumn clearfloat">
+									<div class="timeBox">
+										<input type="text" class="layui-input" id="test1">
+									</div>
+									<ul class="wifiMain">
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													新老客户
+												</div>
+												<div id="client" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													wifi连接时长
+												</div>
+												<div id="time" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													常用软件
+												</div>
+												<div class="software bg-small">
+													<span class="orangeImg">淘宝</span>
+													<span class="blueImg">美团</span>
+													<span class="greenImg">京东</span>
+													<span class="yellowImg">优酷</span>
+													<span class="pinkImg">聚美</span>
+												</div>
+											</div>
+										</li>
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													wifi分布与利用率
+												</div>
+												<div id="rate" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													来访频次
+												</div>
+												<div id="number" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													出现时间段
+												</div>
+												<div id="timeRang" class="bg-small"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn">
+								<span id="wifi">wifi数据分析</span>
+								<span id="park">停车场数据分析</span>
+							</div>
+						</div>
+					</div>
+					<!--客流量分析-->
+					<div class="rightList">
+						<div class="secondMain">
+							<div class="_main _mains  active">
+								<div class="_wrap _flexColumn clearfloat ">
+									<ul class="wifiMain">
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													实时客流热力图
+												</div>
+												<div id="container" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													<span id="realClient" class="active">景区实时客流</span>
+													<span id="todayClient">景区日客流</span>
+												</div>
+												<div class="bg-small">
+													<div class="pR clearfloat">
+														<div class="styled_select fl">
+															<select class="sel_op">
+																<option value="0">所有景点</option>
+																<option value="1">景点1</option>
+																<option value="2">景点2</option>
+																<option value="3">景点3</option>
+																<option value="4">景点4</option>
+															</select>
+														</div>
+														<div class="timeChoose active fr">
+															<input type="text" class="layui-input" id="timeContr3">
+														</div>
+														<div class="timeChoose fr">
+															<input type="text" class="layui-input" id="timeContr4">
+														</div>
+													</div>
+													<div id="clientFlow" class="clientFlowMain">
+														
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="wifiList">
+											<div class="wifiItem" style="position: relative">
+												<div class="_title">
+													<span id="realClientFlow" class="active">景区客流同比</span>
+													<span id="festivalClientFlowC">节假日客流同比</span>
+												</div>
+												<div class="timeChoose2 fr">
+													<input type="text" class="layui-input" id="timeContr5">
+												</div>
+												<div id="clientFlowC" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													<span class="active" id="week">未来一周客流预测</span>
+													<span class="" id="month">未来一月客流预测</span>
+												</div>
+												<div id="clientFlowF" class="bg-small"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--客源地分析-->
+					<div class="rightList">
+						<div class="thirdMain">
+							<div class="_main _mains active">
+								<div style="height: 10%;">
+									<div class="timeBox" style="margin: 0 auto;">
+										<input type="text" class="layui-input" id="test3">
+									</div>
+								</div>
+								<div class="_wrap _wraps clearfloat">
+									<div class="deviceLeft fl" style="position: relative;">
+										<div class="_title _title2">
+											游客来源分布
+										</div>
+										
+										<div class="payway payway2 clearfloat">
+											<span class="paywayList active fl" onclick="chinaMap(this)">境内</span>
+											<span class="paywayList fl" onclick="worldMaps(this)">境外</span>
+											<span class="paywayList fl" onclick="provinceMap(this)">省内</span>
+										</div>
+										<div class="deviceLeftMain deviceLeftMain2 sourceParts active bg-small">
+											<div class="__main">
+												<div class="__top clearfloat">
+													<div class="__left fl">
+														<p class="__title lineHeight">今日累计境内游客</p>
+														<div class="__allNum">
+															<span class="__num">3</span>
+															<span class="__num">5</span>
+															<span class="__num">2</span>
+															<span class="__num">1</span>
+															<span class="__num">6</span>
+															<span class="__num">1</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">本月累计境内游客</p>
+														<div class="__allNum lineHeight">
+															<span class="__num">9</span>
+															<span class="__num">0</span>
+															<span class="__num">2</span>
+															<span class="__num">4</span>
+															<span class="__num">3</span>
+															<span class="__num">1</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">2018年累计境内游客</p>
+														<div class="__allNum">
+															<span class="__num">2</span>
+															<span class="__num">9</span>
+															<span class="__num">5</span>
+															<span class="__num">2</span>
+															<span class="__num">1</span>
+															<span class="__num">6</span>
+															<span class="__num">4</span>
+														</div>
+													</div>
+												</div>
+												<div class="map_bottom" id="chinaMap">
+													
+												</div>
+											</div>
+										</div>
+										<div class="deviceLeftMain deviceLeftMain2 sourceParts bg-small">
+											<div class="__main">
+												<div class="__top clearfloat">
+													<div class="__left fl">
+														<p class="__title lineHeight">今日累计境外游客</p>
+														<div class="__allNum">
+															<span class="__num">2</span>
+															<span class="__num">3</span>
+															<span class="__num">7</span>
+															<span class="__num">3</span>
+															<span class="__num">1</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">本月累计境外游客</p>
+														<div class="__allNum lineHeight">
+															<span class="__num">2</span>
+															<span class="__num">8</span>
+															<span class="__num">9</span>
+															<span class="__num">1</span>
+															<span class="__num">6</span>
+															<span class="__num">7</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">2018年累计境外游客</p>
+														<div class="__allNum">
+															<span class="__num">9</span>
+															<span class="__num">5</span>
+															<span class="__num">2</span>
+															<span class="__num">1</span>
+															<span class="__num">6</span>
+															<span class="__num">4</span>
+														</div>
+													</div>
+												</div>
+												<div class="map_bottom" id="worldMap">
+													
+												</div>
+											</div>
+										</div>
+										<div class="deviceLeftMain deviceLeftMain2 sourceParts bg-small">
+											<div class="__main">
+												<div class="__top clearfloat">
+													<div class="__left fl">
+														<p class="__title lineHeight">今日累计省内游客</p>
+														<div class="__allNum">
+															<span class="__num">3</span>
+															<span class="__num">7</span>
+															<span class="__num">4</span>
+															<span class="__num">3</span>
+															<span class="__num">7</span>
+															<span class="__num">8</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">本月累计省内游客</p>
+														<div class="__allNum lineHeight">
+ 															<span class="__num">2</span>
+															<span class="__num">3</span>
+															<span class="__num">5</span>
+															<span class="__num">6</span>
+															<span class="__num">7</span>
+															<span class="__num">2</span>
+															<span class="__num">1</span>
+														</div>
+													</div>
+													<div class="__left fl">
+														<p class="__title lineHeight">2018年累计省内游客</p>
+														<div class="__allNum">
+															<span class="__num">7</span>
+															<span class="__num">2</span>
+															<span class="__num">4</span>
+															<span class="__num">5</span>
+															<span class="__num">2</span>
+															<span class="__num">2</span>
+															<span class="__num">8</span>
+														</div>
+													</div>
+												</div>
+												<div class="map_bottom" id="provinceMap">
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="deviceRight fr" style="height: 100%">
+										<div class="sourcePart" style="position: relative;">
+											<div class="_title">
+												游客来源组成
+											</div>
+											<div class="payway clearfloat">
+												<span class="paywayList active jing fl" onclick="sourcePart2(this)">境内境外</span>
+												<span class="paywayList sheng fl" onclick="sourcePart1(this)">省内省外</span>
+											</div>
+											<div class="deviceLeftMain bg-small" id="sourcePart">
+											
+											</div>
+										</div>
+										<div class="sourceRank" style="position: relative" id="sourceRank">
+											<div class="_title">
+												游客来源排名
+											</div>
+											<div class="payway clearfloat">
+												<span class="paywayList active fl">省份</span>
+												<span class="paywayList fl">城市</span>
+												<span class="paywayList fl">区县</span>
+												<span class="paywayList fl">景区</span>
+											</div>
+											<div class="hotSearchMain">
+												<div class="top_list clearfloat">
+													<p class="rankingName lineHeight fl"></p>
+													<p class="keyWordName lineHeightNotCenter fl">省份排名</p>
+													<p class="heatName lineHeight fl">游客数</p>
+													<p class="trendName lineHeight fl">占比</p>
+												</div>
+												<ul class="hotSearchBottom">
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/one.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">浙江</p>
+														<p class="heatName lineHeight fl">12546</p>
+														<p class="trendName lineHeight fl">
+															20%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/two.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">江苏</p>
+														<p class="heatName lineHeight fl">11897</p>
+														<p class="trendName lineHeight fl">
+															19%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/three.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">上海</p>
+														<p class="heatName lineHeight fl">10689</p>
+														<p class="trendName lineHeight fl">
+															18%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">4</p>
+														<p class="keyWordName lineHeightNotCenter fl">广东</p>
+														<p class="heatName lineHeight fl">9876</p>
+														<p class="trendName lineHeight fl">
+															12%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">5</p>
+														<p class="keyWordName lineHeightNotCenter fl">北京</p>
+														<p class="heatName lineHeight fl">8697</p>
+														<p class="trendName lineHeight fl">
+															11%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">6</p>
+														<p class="keyWordName lineHeightNotCenter fl">海南</p>
+														<p class="heatName lineHeight fl">7698</p>
+														<p class="trendName lineHeight fl">
+															7%
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="hotSearchMain hide">
+												<div class="top_list clearfloat">
+													<p class="rankingName lineHeight fl"></p>
+													<p class="keyWordName lineHeightNotCenter fl">城市排名</p>
+													<p class="heatName lineHeight fl">游客数</p>
+													<p class="trendName lineHeight fl">占比</p>
+												</div>
+												<ul class="hotSearchBottom">
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/one.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">杭州</p>
+														<p class="heatName lineHeight fl">7896</p>
+														<p class="trendName lineHeight fl">
+															20%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/two.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">南京</p>
+														<p class="heatName lineHeight fl">6895</p>
+														<p class="trendName lineHeight fl">
+															18%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/three.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">上海</p>
+														<p class="heatName lineHeight fl">6429</p>
+														<p class="trendName lineHeight fl">
+															16%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">4</p>
+														<p class="keyWordName lineHeightNotCenter fl">无锡</p>
+														<p class="heatName lineHeight fl">5159</p>
+														<p class="trendName lineHeight fl">
+															12%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">5</p>
+														<p class="keyWordName lineHeightNotCenter fl">北京</p>
+														<p class="heatName lineHeight fl">5078</p>
+														<p class="trendName lineHeight fl">
+															10%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">6</p>
+														<p class="keyWordName lineHeightNotCenter fl">广州</p>
+														<p class="heatName lineHeight fl">4986</p>
+														<p class="trendName lineHeight fl">
+															7%
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="hotSearchMain hide">
+												<div class="top_list clearfloat">
+													<p class="rankingName lineHeight fl"></p>
+													<p class="keyWordName lineHeightNotCenter fl">区县排名</p>
+													<p class="heatName lineHeight fl">游客数</p>
+													<p class="trendName lineHeight fl">占比</p>
+												</div>
+												<ul class="hotSearchBottom">
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/one.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">雄安</p>
+														<p class="heatName lineHeight fl">6458</p>
+														<p class="trendName lineHeight fl">
+															20%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/two.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">保定</p>
+														<p class="heatName lineHeight fl">5206</p>
+														<p class="trendName lineHeight fl">
+															17%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/three.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">北京海淀</p>
+														<p class="heatName lineHeight fl">4689</p>
+														<p class="trendName lineHeight fl">
+															16%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">4</p>
+														<p class="keyWordName lineHeightNotCenter fl">青县</p>
+														<p class="heatName lineHeight fl">4265</p>
+														<p class="trendName lineHeight fl">
+															15%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">5</p>
+														<p class="keyWordName lineHeightNotCenter fl">曲阜</p>
+														<p class="heatName lineHeight fl">3015</p>
+														<p class="trendName lineHeight fl">
+															9%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">6</p>
+														<p class="keyWordName lineHeightNotCenter fl">上海浦东</p>
+														<p class="heatName lineHeight fl">2059</p>
+														<p class="trendName lineHeight fl">
+															7%
+														</p>
+													</li>
+												</ul>
+											</div>
+											<div class="hotSearchMain hide">
+												<div class="top_list clearfloat">
+													<p class="rankingName lineHeight fl"></p>
+													<p class="keyWordName lineHeightNotCenter fl">景区排名</p>
+													<p class="heatName lineHeight fl">游客数</p>
+													<p class="trendName lineHeight fl">占比</p>
+												</div>
+												<ul class="hotSearchBottom">
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/one.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">凤凰古城</p>
+														<p class="heatName lineHeight fl">16985</p>
+														<p class="trendName lineHeight fl">
+															21%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/two.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">白鹿仓</p>
+														<p class="heatName lineHeight fl">14746</p>
+														<p class="trendName lineHeight fl">
+															15%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">
+															<img src="../../img/icon/three.png" alt="">
+														</p>
+														<p class="keyWordName lineHeightNotCenter fl">龙潭大峡谷</p>
+														<p class="heatName lineHeight fl">13512</p>
+														<p class="trendName lineHeight fl">
+															12%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">4</p>
+														<p class="keyWordName lineHeightNotCenter fl">丽江古城</p>
+														<p class="heatName lineHeight fl">11954</p>
+														<p class="trendName lineHeight fl">
+															7%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">5</p>
+														<p class="keyWordName lineHeightNotCenter fl">颐和园</p>
+														<p class="heatName lineHeight fl">10346</p>
+														<p class="trendName lineHeight fl">
+															6%
+														</p>
+													</li>
+													<li class="hotSearchList">
+														<p class="rankingName lineHeight fl">6</p>
+														<p class="keyWordName lineHeightNotCenter fl">宁波东钱湖</p>
+														<p class="heatName lineHeight fl">9568</p>
+														<p class="trendName lineHeight fl">
+															2%
+														</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--游客画像分析-->
+					<div class="rightList">
+						<div class="fourthMain">
+							<div class="_main _mains active">
+								<div class="clearfloat" style="height: 10%;">
+									<div class="basePartBtn fl clearfloat">
+										<p class="basePartBtnList active fl">全国</p >
+										<p class="basePartBtnList fl">省内</p >
+										<p class="basePartBtnList fl">省外</p >
+									</div>
+									<div class="timeBox fr" style="margin-right: 4%;">
+										<input type="text" class="layui-input" id="test4">
+									</div>
+								</div>
+								<div class="_wrap _wraps animated huaxiang active clearfloat">
+									<ul class="wifiMain">
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													游客画像
+												</div>
+												<div id="left" class="left fl bg-small" style="box-sizing:border-box;padding: 40px 20px;">
+													<div class="clearfloat imgs">
+														<div class="imgList fl">
+															<div class="imgListImg">
+																<img src="../../img/man.png"/>
+															</div>
+															<p>男</p>
+														</div>
+														<div class="imgList fl">
+															<div class="imgListImg">
+																<img src="../../img/woman.png"/>
+															</div>
+															<p>女</p>
+														</div>
+													</div>
+													<div class="bottom">
+														<p class="progressBar">
+															<span></span>
+														</p>
+														<div class="proportions clearfloat">
+															<span class="manProportion proportion fl">60%</span>
+															<span class="womanProportion proportion fl">40%</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													游客年龄
+												</div>
+												<div id="clientAge" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													游客职业
+												</div>
+												<div id="clientJob" class="bg-small"></div>
+											</div>
+										</li>
+										<img class="turnImg" onclick="showThisPic(this)" src="../../img/turnRight.png"/>
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													游客手机使用品牌
+												</div>
+												<div class="mainList_main bg-small">
+													<ul class="demo-ul">
+														<li>
+															<span>1</span>
+															<span><img src="../../img/1.png" alt=""></span>
+															<span>Apple</span>
+															<span>38%</span>
+														</li>
+														<li>
+															<span>2</span>
+															<span><img src="../../img/2.png" alt=""></span>
+															<span>华为</span>
+															<span>28%</span>
+														</li>
+														<li>
+															<span>3</span>
+															<span><img src="../../img/3.png" alt=""></span>
+															<span>VIVO</span>
+															<span>18%</span>
+														</li>
+														<li>
+															<span>4</span>
+															<span><img src="../../img/4.png" alt=""></span>
+															<span>oppo</span>
+															<span>18%</span>
+														</li>
+														<li>
+															<span>5</span>
+															<span><img src="../../img/5.png" alt=""></span>
+															<span>小米</span>
+															<span>18%</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													游客手机应用类型
+												</div>
+												<div id="phoneType" class="bg-small"></div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													游客消费水平
+												</div>
+												<div id="paymentLevel" class="bg-small"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="_wrap _wraps animated huaxiang clearfloat">
+									<ul class="wifiMain">
+										<li class="wifiList">
+											<div class="wifiItem">
+												<div class="_title">
+													是否有车
+												</div>
+												<div id="haveCar" class="bg-small clearfloat">
+													<div class="carList fl">
+														<p class="carProportion">60%</p>
+														<div class="carImg">
+															<img src="../../img/haveCar.png"/>
+														</div>
+														<p class="carTitle">有车</p>
+													</div>
+													<div class="carList fr">
+														<p class="carProportion carProportion2">40%</p>
+														<div class="carImg">
+															<img src="../../img/noCar.png"/>
+														</div>
+														<p class="carTitle">无车</p>
+													</div>
+												</div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													是否结婚
+												</div>
+												<div id="getMarried" class="bg-small clearfloat">
+													<div class="marryList fl clearfloat">
+														<div class="marryImg fl">
+															<img src="../../img/marry.png"/>
+														</div>
+														<div class="marryP fl">
+															<div class="marryBg">
+																<p class="marryProportion verticalcenter">60%</p>
+															</div>
+															<div class="marryTitle">已婚</div>
+														</div>
+													</div>
+													<div class="marryList fr clearfloat">
+														<div class="marryImg fl">
+															<img src="../../img/noMarry.png"/>
+														</div>
+														<div class="marryP fl">
+															<div class="marryBg">
+																<p class="marryProportion marryProportion2 verticalcenter">40%</span>
+															</div>
+															<div class="marryTitle">未婚</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="wifiItem">
+												<div class="_title">
+													游客驻足时间
+												</div>
+												<div id="stopTime" class="bg-small"></div>
+											</div>
+										</li>
+										<img class="turnImg" onclick="showThisPic2(this)" src="../../img/turnLeft.png"/>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--景区运营分析-->
+					<div class="rightList">
+						<div class="fifthMain clearfloat">
+							<div class="_main _mains active">
+								<div class="timeBox">
+									<input type="text" class="layui-input" id="test5">
+								</div>
+								<div class="animated yunying active">
+									<div class="lineHeightAround fifthMainTop">
+										<div class="payList" style="position: relative;">
+											<p class="title">支付方式统计</p>
+											<div class="payway clearfloat">
+												<span class="paywayList active fl" onclick="payWay1(this)">景点票</span>
+												<span class="paywayList fl" onclick="payWay2(this)">旅游产品</span>
+											</div>
+											<div class="listMain">
+												<div class="bg-imgMain" id="payWay">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">热销商品</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="hotBuy">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">景区商户排名</p>
+											<div id="" class="listMain">
+												<table id="tenantRank" border="0" width="100%" height="100%" align="center" bgcolor="">
+													<tr>
+														<th>排名</th>
+														<th>商户排名</th>
+														<th>
+															<div class="selectPayway">
+																<div class="selectPaywayT">
+																	<span class="payname lineHeight">食</span>
+																	<!--<span class="layui-icon lineHeight payicon">&#xe625;</span>-->
+																</div>
+																<div class="selectPaywayB">
+																	<p>食</p>
+																	<p>游</p>
+																	<p>住</p>
+																	<p>购</p>
+																	<p>行</p>
+																	<p>娱</p>
+																</div>
+															</div>
+														</th>
+													</tr>
+													<tr class="active">
+														<td>1</td>
+														<td>山水一号酒店管理</td>
+														<td>47</td>
+													</tr>
+													<tr class="active">
+														<td>2</td>
+														<td>江东江南小镇饭店</td>
+														<td>45</td>
+													</tr>
+													<tr class="active">
+														<td>3</td>
+														<td>东方石浦大饭店</td>
+														<td>43</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>宁波东方明珠娱乐公司</td>
+														<td>40</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>宁波江东宁东府舍茶叶经营部</td>
+														<td>36</td>
+													</tr>
+													<tr>
+														<td>6</td>
+														<td>甬南至美餐饮发展</td>
+														<td>32</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<img class="turnImg2" onclick="showThisPic3(this)" src="../../img/turnRight.png"/>
+									<div class="lineHeightAround fifthMainTop">
+										<div class="payList" style="position: relative;">
+											<p class="title">线下售票统计</p>
+											<div class="payway clearfloat">
+												<span class="paywayList active fl" onclick="paycount1(this)">销售</span>
+												<span class="paywayList fl" onclick="paycount2(this)">收入</span>
+											</div>
+											<div class="listMain">
+												<div class="bg-imgMain" id="outLineCount">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">OTA票券数据统计</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="OTACount">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">游客消费水平</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="buyLevel">
+															
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="animated yunying">
+									<div class="lineHeightAround fifthMainTop">
+										<div class="payList">
+											<p class="title">景区运营分析</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="spotOperation">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">出行方式</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="travelWays">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											<p class="title">景区消费结构</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="consumptionStructure">
+															
+												</div>
+											</div>
+										</div>
+									</div>
+									<img class="turnImg2" onclick="showThisPic4(this)" src="../../img/turnLeft.png"/>
+									<div class="lineHeightAround fifthMainTop">
+										<div class="payList">
+											<p class="title">票务销售汇总</p>
+											<div class="listMain">
+												<div class="bg-imgMain" id="ticketSales">
+															
+												</div>
+											</div>
+										</div>
+										<div class="payList">
+											
+										</div>
+										<div class="payList">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--媒体信息监测-->
+					<div class="rightList">
+						<div class="sixthMain">
+							<div class="_main sixthMains active" id="yuqingMain">
+								<div class="timeBox">
+									<input type="text" class="layui-input" id="test6">
+								</div>
+								<div class="sixthMainsMain clearfloat">
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">舆情统计</div>
+										<div class="hotSearchMain">
+											<div class="echartsPic" id="PublicOpinionCount">
+												
+											</div>
+										</div>	
+									</div>
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">情感分析</div>
+										<div class="hotSearchMain">
+											<div class="echartsPic" id="sentimentAnalysis">
+												
+											</div>
+										</div>	
+									</div>
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">情感趋势</div>
+										<div class="hotSearchMain" >
+											<div class="echartsPic" id="sentimentTrend">
+												
+											</div>
+										</div>	
+									</div>
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">主题词云</div>
+										<div class="hotSearchMain">
+											<div class="echartsPic" id="themePart">
+												
+											</div>
+										</div>	
+									</div>
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">舆情指数</div>
+										<div class="hotSearchMain" id="PublicOpinionExponent">
+											<div class="PublicOpinionExponentNum lineHeight">17010</div>
+											<div class="PublicOpinionExponentInfo">
+												<p>正面：52</p>
+												<p>中性：34</p>
+												<p>负面：14</p>
+											</div>
+										</div>	
+									</div>
+									<div class="sixthMainsList fl">
+										<div class="_title hotSearchTitle">舆情指数走势</div>
+										<div class="hotSearchMain">
+											<div class="echartsPic" id="PublicOpinionExponentTrend">
+												
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<div class="_main sixthMainBottom" id="pinglunMain">
+								<div class="sixthMainTop clearfloat">
+									<div class="baseList fl">
+										<div class="baseBtn active">周计算</div>
+										<p class="baseText">2017-01-01 ~ 2017-01-07</p>
+									</div>
+									<div class="baseList fl">
+										<div class="baseBtn">月计算</div>
+										<p class="baseText">2017-01-01 ~ 2017-01-30</p>
+									</div>
+								</div>
+								<div class="_mainTop clearfloat">
+									<p class="_mainTopBtn active fl">评价数量</p>
+									<p class="_mainTopBtn fl">好评率</p>
+									<p class="_mainTopBtn fl">极端差评趋势</p>
+								</div>
+								<div id="evaluateChart">
+									
+								</div>
+								<div class="analyse badWordPart active clearfloat">
+									<div class="analyseList fl">
+										<p class="analyseTitle">评价热度</p>
+										<ul>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">1</span>
+												<span class="fl">中智</span>
+												<span class="fr">77.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">2</span>
+												<span class="fl">游玩</span>
+												<span class="fr">69.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">3</span>
+												<span class="fl">北京</span>
+												<span class="fr">64.8%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">4</span>
+												<span class="fl">自驾</span>
+												<span class="fr">46.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">5</span>
+												<span class="fl">风光</span>
+												<span class="fr">40.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">6</span>
+												<span class="fl">绿色</span>
+												<span class="fr">35.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">7</span>
+												<span class="fl">健康</span>
+												<span class="fr">29.4%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">8</span>
+												<span class="fl">脏乱</span>
+												<span class="fr">15.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">9</span>
+												<span class="fl">春暖花开</span>
+												<span class="fr">7.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">10</span>
+												<span class="fl">大海</span>
+												<span class="fr">5.8%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="analyseList fl">
+										<p class="analyseTitle">新晋热度</p>
+										<ul>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">1</span>
+												<span class="fl">旅游</span>
+												<span class="fr">86.2%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">2</span>
+												<span class="fl">香山</span>
+												<span class="fr">76.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">3</span>
+												<span class="fl">微信</span>
+												<span class="fr">68.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">4</span>
+												<span class="fl">游戏</span>
+												<span class="fr">66.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">5</span>
+												<span class="fl">王者荣耀</span>
+												<span class="fr">49.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">6</span>
+												<span class="fl">吃鸡</span>
+												<span class="fr">46.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">7</span>
+												<span class="fl">大吉大利</span>
+												<span class="fr">38.5%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">8</span>
+												<span class="fl">手机</span>
+												<span class="fr">34.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">9</span>
+												<span class="fl">微博</span>
+												<span class="fr">32.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">10</span>
+												<span class="fl">QQ</span>
+												<span class="fr">25.6%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="analyseList fl">
+										<p class="analyseTitle">退隐热词</p>
+										<ul>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">1</span>
+												<span class="fl">你好</span>
+												<span class="fr">79.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">2</span>
+												<span class="fl">哈哈</span>
+												<span class="fr">73.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">3</span>
+												<span class="fl">热啊</span>
+												<span class="fr">65.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">4</span>
+												<span class="fl">刺激</span>
+												<span class="fr">60.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">5</span>
+												<span class="fl">风景很好</span>
+												<span class="fr">52.0%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">6</span>
+												<span class="fl">有点乱</span>
+												<span class="fr">47.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">7</span>
+												<span class="fl">好吃</span>
+												<span class="fr">45.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">8</span>
+												<span class="fl">贵</span>
+												<span class="fr">30.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">9</span>
+												<span class="fl">环境好</span>
+												<span class="fr">27.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">10</span>
+												<span class="fl">热闹</span>
+												<span class="fr">20.3%</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="analyse badWordPart clearfloat">
+									<div class="analyseList analyseList2 fl">
+										<p class="analyseTitle">好评热词</p>
+										<ul>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">1</span>
+												<span class="fl">中智</span>
+												<span class="fr">77.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">2</span>
+												<span class="fl">游玩</span>
+												<span class="fr">69.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">3</span>
+												<span class="fl">北京</span>
+												<span class="fr">64.8%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">4</span>
+												<span class="fl">自驾</span>
+												<span class="fr">46.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">5</span>
+												<span class="fl">风光</span>
+												<span class="fr">40.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">6</span>
+												<span class="fl">绿色</span>
+												<span class="fr">35.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">7</span>
+												<span class="fl">健康</span>
+												<span class="fr">29.4%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">8</span>
+												<span class="fl">脏乱</span>
+												<span class="fr">15.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">9</span>
+												<span class="fl">春暖花开</span>
+												<span class="fr">7.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">10</span>
+												<span class="fl">大海</span>
+												<span class="fr">5.8%</span>
+											</li>
+										</ul>
+									</div>
+									<div class="analyseList analyseList2 fl">
+										<p class="analyseTitle">差评热词</p>
+										<ul>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">1</span>
+												<span class="fl">旅游</span>
+												<span class="fr">86.2%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">2</span>
+												<span class="fl">香山</span>
+												<span class="fr">76.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">3</span>
+												<span class="fl">微信</span>
+												<span class="fr">68.9%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">4</span>
+												<span class="fl">游戏</span>
+												<span class="fr">66.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">5</span>
+												<span class="fl">王者荣耀</span>
+												<span class="fr">49.1%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">6</span>
+												<span class="fl">吃鸡</span>
+												<span class="fr">46.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">7</span>
+												<span class="fl">大吉大利</span>
+												<span class="fr">38.5%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">8</span>
+												<span class="fl">手机</span>
+												<span class="fr">34.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">9</span>
+												<span class="fl">微博</span>
+												<span class="fr">32.7%</span>
+											</li>
+											<li class="analyseRanking clearfloat">
+												<span class="rankingNum fl">10</span>
+												<span class="fl">QQ</span>
+												<span class="fr">25.6%</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="analyse badWordPart">
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-05-03</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">古城还好，行程中最恶心的一件事，是铜仁飞往北京的飞机晚点3小时，飞往南京的飞机晚点6小时。请走这个机场的朋友注意下。</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-04-23</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">去广西路过，感觉古城本身还行，就是人太多，全商业化了，也就没有多大的游览价值了。顺路看看也还可以的。</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-03-10</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">景色确实不错，吊楼看起来很破旧，不是很喜欢</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-05-03</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">边城票居然只是当天的？不是说好了两日有效？官方带头宰客</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-04-23</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">一个非常商业化的现代古城，145的票价说是9景联票其实大部分内容都知道的了，不能</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-03-10</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">满满套路，到处都坑钱，观景台寺庙套路更深！</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-05-03</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">边城票居然只是当天的？不是说好了两日有效？官方带头宰客</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-04-23</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">一个非常商业化的现代古城，145的票价说是9景联票其实大部分内容都知道的了，不能</div>
+									</div>
+									<div class="badWordMainList clearfloat">
+										<div class="badWordMainList_left fl">
+											<div class="cryImg">
+												<img src="../../img/cry.png"/>
+											</div>
+											<div class="bdTime">2018-03-10</div>
+										</div>
+										<div class="badWordMainList_right lineHeightNotCenter fl">满满套路，到处都坑钱，观景台寺庙套路更深！</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn">
+								<span id="yuqingBtn" class="active">舆情分析</span>
+								<span id="pinglunBtn">评论分析</span>
+							</div>
+						</div>
+					</div>
+					<!--游客关注度分析-->
+					<div class="rightList">
+						<div class="seventhMain">
+							<div class="_main active seventhMain_main seventhMainList" id="hotWordMain">
+								<div id='tag-cloud' class="lineHeight"></div>
+							</div>
+							<div class="_main seventhMain_main seventhMainList clearfloat" id="hotSearchMain">
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">吃</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">山水酒店</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">灌汤包真好吃</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">小龙虾</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">鲍鱼</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">海参</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">小笼包</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">住</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">山水酒店</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">如家</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">7天</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">方便</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">干净</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">空间大</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>		
+								</div>
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">行</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">汽车</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">自驾游</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">堵车</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">停车场</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">方便</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">高铁</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">游</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">方特</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">迪士尼</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">欢乐谷</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">青山绿水</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">湖泊</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">古典</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">购</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">衣服</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">名牌</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">手机</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">纪念品</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">特产</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">买卖</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>		
+								</div>
+								<div class="hotSearch fl">
+									<div class="_title hotSearchTitle">娱</div>
+									<div class="hotSearchMain">
+										<div class="top_list clearfloat">
+											<p class="rankingName lineHeight fl">排名</p>
+											<p class="keyWordName lineHeightNotCenter fl">关键词</p>
+											<p class="heatName lineHeight fl">热度</p>
+											<p class="trendName lineHeight fl">趋势</p>
+										</div>
+										<ul class="hotSearchBottom">
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">1</p>
+												<p class="keyWordName lineHeightNotCenter fl">KTV</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">2</p>
+												<p class="keyWordName lineHeightNotCenter fl">购物</p>
+												<p class="heatName lineHeight fl">12246</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">3</p>
+												<p class="keyWordName lineHeightNotCenter fl">潜水</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">4</p>
+												<p class="keyWordName lineHeightNotCenter fl">游艇</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">5</p>
+												<p class="keyWordName lineHeightNotCenter fl">蹦极</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/up.png"/>
+												</p>
+											</li>
+											<li class="hotSearchList">
+												<p class="rankingName lineHeight fl">6</p>
+												<p class="keyWordName lineHeightNotCenter fl">滑雪</p>
+												<p class="heatName lineHeight fl">12546</p>
+												<p class="trendName lineHeight fl">
+													<img src="../../img/icon/down.png"/>
+												</p>
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+							<div class="btn">
+								<span id="hotWordBtn" class="active">最热词</span>
+								<span id="hotSearchBtn">最热搜</span>
+							</div>
+						</div>
+					</div>
+					<!--自动化报告-->
+					<div class="rightList">
+						<div class="eighthMain">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plug/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plug/echarts/chart/china.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plug/echarts/chart/world.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plug/echarts/chart/province/shandong.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plug/echarts/chart/echarts-wordcloud.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.0&key=f9386e4561640e9ae30546a70ca01919"></script>
+		<!-- UI组件库 1.0 -->
+		<script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+		<script src="../../plug/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../json/heatmapData.js"></script>
+		<script src="../../js/jquery.svg3dtagcloud.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="data-analysis.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+          var token = sessionStorage.getItem('token');
+		</script>
+	</body>
+</html>

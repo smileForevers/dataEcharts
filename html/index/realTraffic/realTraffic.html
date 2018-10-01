@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实时客流监测</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="realTraffic.css"/>
+	</head>
+	<body>
+		<ul style="position: absolute;top:0;right:10px;z-index: 99999999999;">
+			<li class="clickBtn">
+				<span class="clickBtnList active">趋势</span>
+				<span class="clickBtnList">人数</span>
+			</li>
+		</ul>
+		<div class="main active" id="main">
+			
+		</div>
+		<div class="main">
+			<iframe src="../peopleNum/peopleNum.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+		</div>
+	</body>
+	<script src="../../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../plug/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="realTraffic.js" type="text/javascript" charset="utf-8"></script>
+</html>

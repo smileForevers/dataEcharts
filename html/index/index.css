@@ -1,0 +1,302 @@
+.bg{
+	width: 100%;
+	height: 100%;
+	background: url(../../img/index_bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.kong{
+	width: 200px;
+	height: 20px;
+	background: rgba(15,28,131,0.25);
+}
+.main{
+	width: 100%;
+	height: 86%;
+	padding:1% 0;
+	overflow: hidden;
+	position: relative;
+	z-index: 999;
+}
+.line-img{
+	width:20px;
+	height:100%;
+	position: absolute;
+	left:10px;
+	bottom:-5px;
+}
+.line-img-right{
+	left:auto;
+	right:10px;
+	transform: rotateY(180deg);
+}
+.main-left{
+	float: left;
+	width: 23%;
+	height: 100%;
+	margin-left: 1.75%;
+}
+.left-bg,.right-bg{
+	width: 100%;
+	margin-top: 3%;
+	height: 32%;
+	background: url(../../img/small_bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.left-bg:nth-child(1),.right-bg:nth-child(1){
+	margin-top: 0;
+}
+.main-middle{
+	width: 49%;
+	height: 100%;
+	margin-left: 0.75%;
+}
+.tips{
+	width: 100%;
+	height: 5%;
+}
+.main-middle1{
+	width: 100%;
+	height: 60%;
+	background: url(../../img/big_bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-middle2{
+	width: 100%;
+	height: 32%;
+	margin-top: 1.8%;
+}
+
+.main-middle2-list{
+	width: 49%;
+	height: 100%;
+	background: url(../../img/small_bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main-middle2-list:last-child{
+	margin-left: 2%;
+}
+.main-right{
+	width: 23%;
+	height: 100%;
+	margin-left: 0.75%;
+}
+.part-title{
+	width: 100%;
+	height: 16%;
+}
+.part-title li{
+	padding: 0 10px;
+	height: 100%;
+	color: #5ad1ff;
+	font-size:20px;
+	font-family: '黑体';
+}
+.part-title .clickBtnList{
+	font-size:14px;
+	color: #fff;
+	cursor: pointer;
+}
+.part-title .clickBtnList.active{
+	color: #5ad1ff;
+	border-bottom: 2px solid #5ad1ff;
+	box-sizing: border-box;
+}
+.sourseTitle{
+	height: 20%;
+	font-size:20px;
+	color: #5ad1ff;
+}
+.part-main{
+	width: 100%;
+	height: 84%;
+}
+.soursemain{
+	height: 80%;
+	position: relative;
+	top: -6%;
+}
+.back{
+	/*display: block;*/
+	width: 42.5%;
+	height: 100%;
+	background: #0c0e2d;
+}
+.back:hover{
+	cursor: pointer;
+}
+.backImg{
+	display: block;
+}
+.backMain{
+	height: 100%;
+	font-size: 20px;
+	color: #fff;
+	margin-left: 10px;
+}
+
+/*  menjin-small */
+.ranking_title{
+	width: 10%;
+	padding-left: 26px;
+}
+.ranking_title li{
+	width: 24px;
+	height: 24px;
+	font-size: 14px;
+	background: #889df8;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+	margin-top: 5px;
+	border-radius: 3px;
+}
+.ranking_title li:first-child{
+	margin-top: 2px;
+	background: #ff7371;
+}
+.ranking_title li:nth-child(2){
+	background: #ff924d;
+}
+.ranking_title li:nth-child(3){
+	background: #2c70e8;
+}
+.ranking{
+	width: 90%;
+	height: 100%;
+}
+
+/*weather*/
+.todayWeather{
+	width:100%;
+	height: 120px;
+}
+.todayTem{
+	width: 170px;
+	position: relative;
+}
+span{
+	display: inline-block;
+}
+.tem{
+	position:relative;
+}
+.Tdu{
+	width: 180px;
+	text-align: center;
+	height: 120px;
+	line-height: 120px;
+	font-size: 56px;
+}
+.Tdot{
+	position: absolute;
+	top: 20px;
+	left: 130px;
+	font-size: 20px;
+}
+.todayTemRange{
+	padding-top: 35px;
+	margin-left: 20px;
+	position: relative;
+}
+.todayTemR span{
+	font-size: 16px;
+}
+.fdot{
+	position: absolute;
+	top: -16px;
+	left: 18px;
+}
+.fdotfirst{
+	left:14px;
+}
+.tdate{
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	font-size: 16px;
+}
+.tImg{
+	margin-top: 12px;
+}
+.tTime{
+	margin-top: 30px;
+	margin-left: 32px;
+	font-size: 16px;
+}
+.zhiliang{
+	font-size: 16px;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+}
+.followDay{
+	width: 100%;
+	height: 152px;
+}
+.fWeatherList{
+	width: 76px;
+	height: 100%;
+	margin-left: 2px;
+}
+.fWeatherList:first-child{
+	margin-left: 0;
+}
+.followData{
+	width: 100%;
+	font-size: 16px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+}
+.fImg{
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+}
+.fTem{
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.fTem span{
+	font-size: 16px;
+}
+.fTem .sdot{
+	position: absolute;
+	top: -16px;
+	right: 2px;
+}
+/*小喇叭滚动新闻*/
+.tips{
+	width: 100%;
+	height: 5%;
+	background: url(../../img/tips.gif) no-repeat 2% center;
+	background-size: contain;
+}
+.tips-txt{
+	height:100%;
+	margin-left:40px;
+	line-height:66px;
+	color:#fff;
+}
+.line:before{
+	content: " ";
+	position: absolute;
+	left: 2%;
+	bottom: 1%;
+	right: 2%;
+	height: 1px;
+	border-bottom: 4px solid #01AAED;
+	color: #01AAED;
+	transform-origin: 0 100%;
+	transform: scaleY(0.5);
+}
+@media screen and (max-width: 1440px){
+	.tips-txt{
+		line-height:40px;
+	}
+}

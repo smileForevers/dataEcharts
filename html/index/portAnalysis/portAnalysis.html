@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>停车数据</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="portAnalysis.css"/>
+	</head>
+	<body>
+		<div class="main" id="main">
+			<div class="map-box">
+				<ul class="tab">
+					<li class="active"><label>今日车位信息</label></li>
+					<li><label>今日车辆来源地</label></li>
+				</ul>
+				<div class="table">
+					<div class="table-tit">
+						<span>停车场名称</span>
+						<span>已停车位</span>
+						<span>剩余车位</span>
+					</div>
+					<div class="table-item-box">
+						<div class="table-item">
+							<span>游客服务中心</span>
+							<span class="table-item-red"><i>96</i></span>
+							<span class="table-item-green"><i>1304</i></span>
+						</div>
+						<div class="table-item">
+							<span>小普陀景区</span>
+							<span class="table-item-red"><i>142</i></span>
+							<span class="table-item-green"><i>788</i></span>
+						</div>
+						<div class="table-item">
+							<span>雅戈尔动物园</span>
+							<span class="table-item-red"><i>234</i></span>
+							<span class="table-item-green"><i>1056</i></span>
+						</div>
+					</div>
+				</div>
+				<div id="carSources" class="" style="width: 96%;height: 80%;"></div>
+			</div>
+		</div>
+	</body>
+	<script src="../../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../plug/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="portAnalysis.js" type="text/javascript" charset="utf-8"></script>
+</html>

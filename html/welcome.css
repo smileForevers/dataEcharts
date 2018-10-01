@@ -1,0 +1,75 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	background: url(../img/indexBg.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+@font-face {
+    font-family:'trends';
+    src:url('../font/trends.ttf');
+}
+.floatT{
+	width: 240px;
+	height: 220px;
+	position: fixed;
+	cursor: pointer;
+}
+.floatT img{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+}
+.floatT p{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'trends';
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#4cabeb));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.floatT1{
+	left: 2%;
+	top: 54%;
+}
+.floatT2{
+	left: 17%;
+	top: 46%;
+}
+.floatT3{
+	left: 34%;
+	top: 41%;
+}
+.floatT4{
+	right: 34%;
+	top: 41%;
+}
+.floatT5{
+	right: 17%;
+	top: 46%;
+}
+.floatT6{
+	right: 2%;
+	top: 54%;
+}
+.floatT .img-active{
+	display: none;
+}
+.floatT a:hover{
+	color:#19f0ff;
+}
+.floatT a:hover .img{
+	display: none;
+}
+.floatT a:hover .img-active{
+	transform: scale(1.2);
+	display: block;
+}

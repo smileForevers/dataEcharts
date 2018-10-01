@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天气状况</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="weather.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<div class="top clearfloat">
+				<div id="weatherImg" class="fl verticalcenter">
+					<img class="image1" src=""/>
+				</div>
+				<div class="averageTemperature verticalcenter todayTem fl"></div>
+				<div class="tdRight fl">
+					<p class="Tph"></p>
+					<p id="zhiliang"></p>
+				</div>	
+			</div>
+			<div class="bottom clearfloat">
+				<div class="left fl">
+					<p class="todayTemR"></p>
+					<p class="tdate"></p>
+					<p class="tphem"></p>
+					<p class="tphem2"></p>
+				</div>
+				<div class="middle fl">
+					<p class="verticalcenter">明天</p>
+					<div class="nextImg verticalcenter"><img class="image2" src=""/></div>
+					<p class="verticalcenter nextData1"></p>
+				</div>
+				<div class="right fl">
+					<p class="verticalcenter">后天</p>
+					<div class="nextImg verticalcenter"><img class="image3" src=""/></div>
+					<p class="verticalcenter nextData2"></p>
+				</div>
+			</div>
+		</div>	
+		
+	</body>
+	<script src="../../../plug/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="weather.js" type="text/javascript" charset="utf-8"></script>
+</html>
