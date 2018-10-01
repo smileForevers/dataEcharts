@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>头部导航</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+</head>
+<body>
+<div class="head clearfloat">
+    <div class="head-time fl clearfloat">
+    	<a href="../html/welcome.html" target="_parent" class="timeImg fl lineHeight">
+    		<img class="homeImg" src="../img/home.png"/>
+    		<span class="home">首页</span>
+    	</a>
+        <span class="nowTime fl lineHeight"></span>
+        <span class="nowDate fl lineHeightNotCenter"></span>
+    </div>
+    <div class="head-title fl verticalcenter">
+    	<img src="" alt="" id="logo">
+    	<span id="title"></span>
+    </div>
+    <ul class="head-ul lineHeight fl clearfloat">
+        <li class="" data-href="../html/index/index.html">
+            <a class="lineHeight"  target="_parent">运行监测</a>
+        </li>
+        <li data-href="../html/data-analysis/data-analysis.html">
+            <a class="lineHeight" target="_parent">数据分析</a>
+        </li>
+        <li class="lineHeight" data-href="../html/video/video.html">
+            <a class="lineHeight">视频监控</a>
+        </li>
+        <li class="lineHeight" data-href="../html/virtualTourism/virtualTourism.html">
+            <a class="lineHeight">虚拟旅游</a>
+        </li>
+        <!--<li class="lineHeight" data-href="../html/login.html?code=1">
+            <a class="lineHeight">后台中心</a>
+        </li>-->
+         <li class="lineHeight" data-href="../html/emergencyCommand/emergencyCommand.html">
+            <a class="lineHeight">应急指挥</a>
+        </li>
+        <li class="lineHeight backToLogin" data-href="../html/login.html?code=1">
+            <img src="../img/backToLogin.png" id="back"/>
+        </li>
+    </ul>
+</div>
+<script src="../plug/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('.nowTime').html(getNowTime());
+		$('.nowDate').html(getNowDate()+'&nbsp;&nbsp;&nbsp;'+getNowDay());
+		setInterval(function(){
+			var nowTime=getNowTime();
+			$('.nowTime').html(nowTime);
+		},1000);
+      getToken();
+      footerTab();
+      getLogo();
+	})
+    
+    /*
+     @fn     头部切换
+     @author  高霞
+     @date    2018.5.11
+     @param
+     */
+    function footerTab() {
+      var href = window.parent.location.href;
+      $('.head-ul li').each(function (i,res) {
+        
+        var attrHref = getArreyLast(res.dataset.href);
+        
+        //console.log(res.dataset.href,href, attrHref)
+       
+        if (href.indexOf (attrHref) !== -1) {
+          $(this).addClass('active').siblings('li').removeClass('active')
+        }
+      })
+      // 点击改变链接
+      $('.head-ul li').on('click',function () {
+        console.log($(this).attr('data-href'))
+        if($(this).attr('data-href').indexOf('login.html') != -1){
+          sessionStorage.setItem('token','')
+        }
+        window.parent.location.href = $(this).attr('data-href');
+      })
+        /*
+         @fn     链接数组
+         @author  高霞
+         @date    2018.5.11
+         @param
+         */
+      function getArreyLast(href) {
+        var arr = href.split('/');
+        return arr[arr.length-1]
+      }
+    }
+    /*
+     @fn     获取token
+     @author  高霞
+     @date    2018.5.29
+     @param
+     */
+    function getToken() {
+      var token = sessionStorage.getItem('token');
+      if (token == '') {
+        parent.location.href = '../html/login.html?code=2'
+      }
+    }
+    /*
+     @fn     获取logo数据
+     @author  高霞
+     @date    2018.6.1
+     @param
+     */
+    function getLogo() {
+      let logoObj = document.querySelector('#logo');
+      let logoTitle = document.querySelector('#title');
+      let tenantLogo = sessionStorage.getItem('tenantLogo');
+      let tenantName = sessionStorage.getItem('tenantName');
+//    console.log('tenantLogo:'+tenantLogo+','+'tenantName:'+tenantName)
+      if (tenantLogo==''||tenantLogo=='null') {
+        logoObj.src = '../img/earth.png';
+      } else {
+        logoObj.src = tenantLogo;
+      }
+      if (tenantName==''||tenantName=='null') {
+        logoTitle.innerHTML = '景区旅游大数据平台';
+      } else {
+        logoTitle.innerHTML = tenantName.replace(/\s|\xA0/g,"");
+      }
+    }
+</script>
+</body>
+</html>
